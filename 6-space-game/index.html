@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Drawing</title>
+    <style>
+        canvas {
+            border: 1px solid #000;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <script>
+        // Get the canvas element and its drawing context
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Draw a filled rectangle
+        ctx.fillStyle = 'green';
+        ctx.fillRect(10, 10, 100, 100);
+
+        // Draw a stroked rectangle
+        ctx.strokeStyle = 'blue';
+        ctx.strokeRect(140, 10, 100, 100);
+
+        // Draw a circle
+        ctx.beginPath();
+        ctx.arc(250, 250, 50, 0, Math.PI * 2);
+        ctx.fillStyle = 'red';
+        ctx.fill();
+        ctx.stroke();
+
+        // Draw a line
+        ctx.beginPath();
+        ctx.moveTo(10, 150);
+        ctx.lineTo(200, 300);
+        ctx.strokeStyle = 'black';
+        ctx.stroke();
+    </script>
+</body>
+</html>
